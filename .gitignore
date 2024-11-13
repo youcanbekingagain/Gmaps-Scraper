@@ -1,0 +1,30 @@
+# Credentials and tokens
+credentials.json
+token.json
+
+# Cache files
+__pycache__/
+*.pyc
+.pytest_cache/
+.coverage
+htmlcov/
+
+# Environment files
+.env
+.venv
+env/
+venv/
+
+# IDE specific files
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# OS specific files
+.DS_Store
+Thumbs.db 
+
+# Project specific
+latest_logs/
+download_files/

@@ -1,0 +1,22 @@
+[tool.poetry]
+name = "event-scraper"
+version = "0.1.0"
+description = ""
+authors = ["Aman Singh <amansingh1rn19ec016@gmail.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.11"
+seleniumbase = "^4.28.1"
+pytest = "8.2.1"
+google-api-python-client = "^2.124.0"
+google-auth-httplib2 = "^0.2.0"
+google-auth-oauthlib = "^1.2.0"
+python-dotenv = "^1.0.1"
+pytest-xdist = "^3.6.1"
+
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"

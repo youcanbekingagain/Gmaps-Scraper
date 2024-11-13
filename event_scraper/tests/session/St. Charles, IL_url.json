@@ -1,0 +1,30 @@
+{
+    "urls": [
+        "https://www.google.com/maps/place/St.+Charles/data=!4m7!3m6!1s0x880f1e7b1aafbc77:0x611579fecbe919a2!8m2!3d41.9141945!4d-88.3086867!16zL20vMDEzM3Q1!19sChIJd7yvGnseD4gRohnpy_55FWE?authuser=0&hl=en&rclk=1",
+        "https://www.google.com/maps/place/St.+Charles+Community+Unit+School+District+303/data=!4m7!3m6!1s0x880f1d1a28dd9429:0xe5b17f64da5758e4!8m2!3d41.9275812!4d-88.3433623!16zL20vMGI3d2Qw!19sChIJKZTdKBodD4gR5FhX2mR_seU?authuser=0&hl=en&rclk=1",
+        "https://www.google.com/maps/place/University+Of+Illinois+Extension+Kane+County/data=!4m7!3m6!1s0x880ee2a0ff8e6be1:0x3fdcc4510b1b2174!8m2!3d41.9052276!4d-88.3409008!16s%2Fg%2F11b5wk6h91!19sChIJ4WuO_6DiDogRdCEbC1HE3D8?authuser=0&hl=en&rclk=1",
+        "https://www.google.com/maps/place/Lindenwood+University/data=!4m7!3m6!1s0x87df2f19e20b6def:0x46b335b39c1db1b8!8m2!3d38.7857829!4d-90.5022228!16zL20vMDF6M3k4!19sChIJ720L4hkv34cRuLEdnLM1s0Y?authuser=0&hl=en&rclk=1",
+        "https://www.google.com/maps/place/Judson+University/data=!4m7!3m6!1s0x880f057bf01891f7:0xd4710b66a68302d7!8m2!3d42.0604768!4d-88.2898513!16zL20vMDY3bTlz!19sChIJ95EY8HsFD4gR1wKDpmYLcdQ?authuser=0&hl=en&rclk=1",
+        "https://www.google.com/maps/place/Saint+Charles+East+High+School/data=!4m7!3m6!1s0x880f025f0712e55b:0x91c77b31e6146977!8m2!3d41.9282952!4d-88.2813015!16zL20vMDl6NzE5!19sChIJW-USB18CD4gRd2kU5jF7x5E?authuser=0&hl=en&rclk=1",
+        "https://www.google.com/maps/place/Elmhurst+University/data=!4m7!3m6!1s0x880e4cace5199033:0x9be6c81131a12a9e!8m2!3d41.8968173!4d-87.9471525!16zL20vMDQ5NjE5!19sChIJM5AZ5axMDogRniqhMRHI5ps?authuser=0&hl=en&rclk=1",
+        "https://www.google.com/maps/place/Wheaton+College/data=!4m7!3m6!1s0x880e54869a6a4b69:0x379b036cbe73503!8m2!3d41.8695424!4d-88.0969325!16zL20vMDF5MjB2!19sChIJaUtqmoZUDogRAzXnyzaweQM?authuser=0&hl=en&rclk=1",
+        "https://www.google.com/maps/place/Benedictine+University/data=!4m7!3m6!1s0x880e572eebeb741b:0x595f78ae69ec2107!8m2!3d41.7784418!4d-88.0952683!16zL20vMDZkazli!19sChIJG3Tr6y5XDogRByHsaa54X1k?authuser=0&hl=en&rclk=1",
+        "https://www.google.com/maps/place/Aurora+University/data=!4m7!3m6!1s0x880ee56472c31c77:0x67f84d75ad2631ca!8m2!3d41.7544173!4d-88.3494778!16zL20vMDlyNjgz!19sChIJdxzDcmTlDogRyjEmrXVN-Gc?authuser=0&hl=en&rclk=1",
+        "https://www.google.com/maps/place/Roosevelt+University+-+Schaumburg+Campus/data=!4m7!3m6!1s0x880faf8e9b24d3e7:0x39d2692e065e9f64!8m2!3d42.0543761!4d-88.0389532!16s%2Fg%2F11f9j7z3ww!19sChIJ59Mkm46vD4gRZJ9eBi5p0jk?authuser=0&hl=en&rclk=1",
+        "https://www.google.com/maps/place/Q+Center/data=!4m10!3m9!1s0x880f02c4082ec847:0xab245296ba23e1aa!5m2!4m1!1i2!8m2!3d41.9333713!4d-88.3106492!16s%2Fg%2F1tknl0sk!19sChIJR8guCMQCD4gRquEjupZSJKs?authuser=0&hl=en&rclk=1",
+        "https://www.google.com/maps/place/St+Charles+Community+School+District/data=!4m7!3m6!1s0x880f02aba4c55a13:0xda18f837d5bfdaa4!8m2!3d41.910567!4d-88.3212457!16s%2Fg%2F12hm1v4lp!19sChIJE1rFpKsCD4gRpNq_1Tf4GNo?authuser=0&hl=en&rclk=1",
+        "https://www.google.com/maps/place/Hilton+Garden+Inn+St.+Charles/data=!4m10!3m9!1s0x880f0210b5558113:0x687f4d7aa8295f5a!5m2!4m1!1i2!8m2!3d41.9229754!4d-88.2545844!16s%2Fg%2F1tdk5s8c!19sChIJE4FVtRACD4gRWl8pqHpNf2g?authuser=0&hl=en&rclk=1",
+        "https://www.google.com/maps/place/St.+Augustine+College/data=!4m7!3m6!1s0x880efac5f404f0e1:0xaccf5291ac328f0d!8m2!3d41.7741687!4d-88.3139714!16s%2Fg%2F11c55s7dtb!19sChIJ4fAE9MX6DogRDY8yrJFSz6w?authuser=0&hl=en&rclk=1",
+        "https://www.google.com/maps/place/Northern+Illinois+University/data=!4m7!3m6!1s0x880f2ac150707ca7:0x3bdfef7d190f7c00!8m2!3d41.934194!4d-88.7738783!16zL20vMDJ5eGpz!19sChIJp3xwUMEqD4gRAHwPGX3v3zs?authuser=0&hl=en&rclk=1",
+        "https://www.google.com/maps/place/Illinois+Institute+of+Technology+Rice+Campus/data=!4m7!3m6!1s0x880e54042b57e01b:0x8b5d77b5f11772b4!8m2!3d41.8320433!4d-88.0950965!16s%2Fg%2F1tpf7qh8!19sChIJG-BXKwRUDogRtHIX8bV3XYs?authuser=0&hl=en&rclk=1",
+        "https://www.google.com/maps/place/Rasmussen+University+-+Aurora%2FNaperville/data=!4m7!3m6!1s0x880ee452410c1ee9:0xb94ae0261ce4809f!8m2!3d41.7930462!4d-88.371205!16s%2Fm%2F0cvbxks!19sChIJ6R4MQVLkDogRn4DkHCbgSrk?authuser=0&hl=en&rclk=1",
+        "https://www.google.com/maps/place/Hotel+Baker/data=!4m10!3m9!1s0x880f02af67c0ae6f:0xac6b999d1931cb96!5m2!4m1!1i2!8m2!3d41.9137204!4d-88.3147815!16s%2Fm%2F02wzt26!19sChIJb67AZ68CD4gRlssxGZ2Za6w?authuser=0&hl=en&rclk=1",
+        "https://www.google.com/maps/place/Geneva/data=!4m7!3m6!1s0x880ee1fe63d22d9b:0x56d1ed0b4c65c8c9!8m2!3d41.8926437!4d-88.3287896!16s%2Fm%2F027t9nn!19sChIJmy3SY_7hDogRychlTAvt0VY?authuser=0&hl=en&rclk=1",
+        "https://www.google.com/maps/place/University+of+Illinois+Chicago/data=!4m7!3m6!1s0x880e2ce01f97c2bb:0xa6033e9aa2dbdcdc!8m2!3d41.8686034!4d-87.6484377!16zL20vMDF5MTdt!19sChIJu8KXH-AsDogR3Nzbopo-A6Y?authuser=0&hl=en&rclk=1",
+        "https://www.google.com/maps/place/Elgin+Community+College/data=!4m7!3m6!1s0x880f04d231af669d:0xb35eaf19569fff1a!8m2!3d42.0180249!4d-88.3230038!16s%2Fm%2F028555n!19sChIJnWavMdIED4gRGv-fVhmvXrM?authuser=0&hl=en&rclk=1",
+        "https://www.google.com/maps/place/Waubonsee+Community+College/data=!4m7!3m6!1s0x880ee70c90e3bfc3:0x690ac32119d3eec1!8m2!3d41.7952983!4d-88.4584655!16zL20vMGZ3bjNy!19sChIJw7_jkAznDogRwe7TGSHDCmk?authuser=0&hl=en&rclk=1",
+        "https://www.google.com/maps/place/Thompson+Middle+School/data=!4m7!3m6!1s0x880f02ab67b2944d:0xc0661d164b23c972!8m2!3d41.9119657!4d-88.3224388!16s%2Fm%2F076mly_!19sChIJTZSyZ6sCD4gRcskjSxYdZsA?authuser=0&hl=en&rclk=1",
+        "https://www.google.com/maps/place/Wild+Rose+Elementary+School/data=!4m7!3m6!1s0x880f1d46388a4dd1:0x3f65e6a77a32a29a!8m2!3d41.9239704!4d-88.3347862!16s%2Fm%2F0766fbs!19sChIJ0U2KOEYdD4gRmqIyeqfmZT8?authuser=0&hl=en&rclk=1",
+        "https://www.google.com/maps/place/Anderson+Elementary+School/data=!4m7!3m6!1s0x880f1d542aa69c87:0xaca3c7189e6d6d7d!8m2!3d41.9625791!4d-88.3032866!16s%2Fm%2F076mlxr!19sChIJh5ymKlQdD4gRfW1tnhjHo6w?authuser=0&hl=en&rclk=1"
+    ]
+}

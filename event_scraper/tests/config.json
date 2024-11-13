@@ -1,0 +1,32 @@
+{
+    "spreadsheet_id": "1IniNxXaTW9yCqfA9U-j-g0SxbfToiU-QLloimxrHUZk",
+    "locations": [
+        "Wheaton, IL",
+        "Aurora, IL",
+        "Naperville, IL"
+    ],
+    "business_categories": [
+        "Bars",
+        "Nightclubs",
+        "Lounges",
+        "Speakeasies",
+        "Hookah Lounges",
+        "Comedy Clubs",
+        "Music Venues"
+    ],
+    "headers": [
+        "Venue Name",
+        "Location",
+        "Instagram",
+        "facebook",
+        "Website",
+        "Address",
+        "Google Maps Link",
+        "Other Websites",
+        "Place Phone",
+        "Place Category",
+        "Place Type",
+        "Place Review Star",
+        "Place Review Count"
+    ]
+}
