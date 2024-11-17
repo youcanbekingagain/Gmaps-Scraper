@@ -11,5 +11,6 @@ A Python-based Google Maps scraper that automatically collects business informat
 
 ## Prerequisites
 - Python 3.11
+- Poetry ( added to environment variables or use py -m poetry )
 - Google Cloud Project with Sheets API enabled
 - Google Cloud credentials
