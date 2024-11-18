@@ -1,7 +1,7 @@
 import pytest
 import json
 from typing import Dict, List, Any
-from ..pages.flyer_scraper import GoogleMaps
+from ..pages.scraper import GoogleMaps
 from ..utilities.logger import project_logger
 from parameterized import parameterized
 from contextlib import contextmanager
