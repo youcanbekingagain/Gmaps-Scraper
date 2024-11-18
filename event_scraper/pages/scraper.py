@@ -58,13 +58,10 @@ class GoogleMaps(BaseCase):
             return None
 
     def create_required_dir(self) -> None:
-        """Create required directories and files for the session."""
+        """Create required directories for the session."""
         with self.safe_operation("directory creation"):
             self.session_dir = Path("session")
-            self.spreadsheet = self.session_dir / "spreadsheet.json"
             self.session_dir.mkdir(parents=True, exist_ok=True)
-            if not self.spreadsheet.exists():
-                self.spreadsheet.touch()
 
     def get_category_location(self) -> Tuple[tuple, tuple]:
         """Get business categories and locations from configuration."""
@@ -130,21 +127,135 @@ class GoogleMaps(BaseCase):
                 if (index + 1) % 10 == 0:
                     self.refresh_proxy_session()
 
-                place_data = self.process_single_place(gmaps_link)
-                if place_data:
-                    self.write_place_data(place_data, sheet_title)
+                self.open(gmaps_link)
+                self.wait(2)
+
+                # Extract all place details
+                place_name = (
+                    self.safe_execute(self.get_text, PLACE_NAME, timeout=1) or "NA"
+                )
+
+                if place_name == "NA":
+                    self.open(gmaps_link)
+                    self.wait(15)
+                    self.scroll_place_div(1)
+                    self.wait(2)
+                    place_name = (
+                        self.safe_execute(self.get_text, PLACE_NAME, timeout=1) or "NA"
+                    )
+
+                # Extract other details
+                place_type = self.safe_execute(self.get_text, PLACE_TYPE, timeout=1)
+                place_address = self.safe_execute(
+                    self.get_text, PLACE_ADDRESS, timeout=1
+                )
+
+                self.scroll_place_div(200)
+                place_website = self.safe_execute(
+                    self.get_text, PLACE_WEBSITE, timeout=1
+                )
+                place_phone = self.safe_execute(self.get_text, PLACE_PHONE, timeout=1)
+                place_review_star = self.safe_execute(
+                    self.get_text, PLACE_REVIEW_STAR, timeout=1
+                )
+
+                # Process review count
+                place_review_count = (
+                    self.safe_execute(
+                        lambda: self.get_text(PLACE_REVIEW_PEOPLE_NUMBER, timeout=1)
+                        .replace("(", "")
+                        .replace(")", "")
+                    )
+                    or "NA"
+                )
+
+                if place_review_count == "NA" and place_review_star:
+                    place_review_count = "1"
+
+                plus_code = self.safe_execute(self.get_text, PLACE_PLUS_CODE, timeout=1)
+
+                # Get social media links
+                social_links = self.get_social_media_links()
+
+                # Compile all data
+                place_data = [
+                    place_name,
+                    place_address,
+                    social_links["instagram"],
+                    social_links["facebook"],
+                    place_website,
+                    plus_code,
+                    gmaps_link,
+                    social_links["other"],
+                    place_phone,
+                    self.current_business_type,
+                    place_type,
+                    place_review_star,
+                    place_review_count,
+                ]
+
+                # Sanitize and write data
+                sanitized_data = self.sanitize_place_data(place_data)
+                self.write_place_data(sanitized_data, sheet_title)
 
             except Exception as e:
                 logger.error(f"Error processing place {index}: {e}")
 
-    def process_single_place(self, gmaps_link: str) -> Optional[List[str]]:
-        """Process a single place and extract its details."""
-        with self.safe_operation(f"processing place: {gmaps_link}"):
-            self.open(gmaps_link)
-            self.wait(2)
+    def get_social_media_links(self) -> dict:
+        """Extract social media links from the place details."""
+        for _ in range(8):  # Scroll multiple times to load all elements
+            self.scroll_place_div(800)
+            self.wait(0.2)
+        self.wait(1)  # Extra wait for elements to load fully
 
-            place_details = self.process_place_details(gmaps_link)
-            return self.sanitize_place_data(place_details)
+        try:
+            # Switch to the iframe containing the elements
+            self.switch_to_frame("//iframe")
+            elements = self.find_elements(WEB_SEARCH_RESULTS)
+            print("len", len(elements))
+
+            instagram_link = ""
+            facebook_link = ""
+            other_links = []
+
+            for element in elements:
+                try:
+                    element.click()  # Click the element
+                    self.wait(1)  # Wait for the new tab to open
+
+                    # Switch to the new tab (assuming it opens as the second tab)
+                    self.switch_to_newest_window()
+                    current_url = self.get_current_url()  # Get the URL from the new tab
+                    if "instagram.com" in current_url:
+                        instagram_link = current_url
+                    elif "facebook.com" in current_url:
+                        facebook_link = current_url
+                    else:
+                        other_links.append(current_url)
+
+                    # Close the new tab and switch back to the original tab
+                    self.driver.close()
+                    self.switch_to_default_window()
+
+                    # Re-enter the iframe for further processing
+                    self.switch_to_frame("//iframe")
+
+                except Exception as e:
+                    print(f"Error while processing an element: {e}")
+                    # Ensure we return to the original tab and context
+                    self.switch_to_window(0)
+                    self.switch_to_frame("//iframe")
+                    continue
+
+            return {
+                "instagram": instagram_link,
+                "facebook": facebook_link,
+                "other": " ; ".join(other_links),
+            }
+
+        except Exception as e:
+            print(f"Error extracting social media links: {e}")
+            return {"instagram": "", "facebook": "", "other": ""}
 
     def sanitize_place_data(self, place_data: List[str]) -> List[str]:
         """Ensure all place data fields have valid values."""
